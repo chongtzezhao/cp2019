@@ -11,8 +11,7 @@ while n!=1:
 
 s=""
 for i in range(len(integers)-1):
-    s+=str(integers[i])
-    s+=", "
+    s+=str(integers[i])+', '
 
 s+=str(integers[-1])
 
