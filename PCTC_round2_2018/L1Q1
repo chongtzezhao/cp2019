@@ -1,0 +1,8 @@
+a = eval(input())
+b = eval(input())
+c = eval(input())
+
+if a+b==c or b+c==a or a+c==b:
+    print("HAPPY CROWD")
+else:
+    print("UNHAPPY CROWD")
