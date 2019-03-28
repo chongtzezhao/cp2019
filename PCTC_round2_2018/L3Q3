@@ -1,0 +1,24 @@
+row, seat=input().split()
+row=int(row)
+seat=int(seat)
+capacity=[]
+for i in range(row):
+    capacity.append(seat)
+
+num=int(input())
+tickets=0
+g=[]
+for i in range(num):
+    group=int(input())
+    g.append(group)
+    
+for i in range(num):
+    for j in range(row):
+        if capacity[j]>=g[i]:
+            capacity[j]-=g[i]
+            tickets+=g[i]
+            break
+
+print(tickets)
+        
+
