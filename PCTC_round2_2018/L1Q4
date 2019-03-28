@@ -1,0 +1,15 @@
+num=int(input())
+
+y=0
+n=0
+for i in range(num):
+    a=input()
+    if a=="YES":
+        y+=1
+    elif a=="NO":
+        n+=1
+    else:
+        pass
+    
+print("YES "+str(y))
+print("NO "+str(n))
