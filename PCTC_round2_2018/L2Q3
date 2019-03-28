@@ -1,0 +1,21 @@
+import math
+string = input()
+speed=0
+distance=0
+for i in string:
+    if i=="+":
+        speed+=15
+    elif i=="-":
+        speed+=3
+    elif i=="#":
+        distance+=4
+
+if speed>=distance:
+    print("\\")
+else:
+    if speed%4==0:
+        for i in range(int(speed/4)+1):
+            print("#", end="")
+    else:
+        for i in range(math.ceil(speed/4)):
+            print("#", end="")
