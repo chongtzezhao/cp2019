@@ -1,0 +1,19 @@
+d=int(input())
+n=int(input())
+corrdinates=[]
+for i in range(n):
+    x, y=input().split()
+    x=int(x)
+    y=int(y)
+    coor[i].append(x, y)
+    
+fires=0
+curr_coor=(0, 0)
+lit
+for i in range(n):
+    for j in range(d+1):
+        if curr_coor[0]-j<=coor[i][0]<=curr_coor[0]+j and  curr_coor[1]-(d-j)<=coor[i][1]<=curr_coor[1]+(d-j):
+            fires+=1
+            
+            break
+    
