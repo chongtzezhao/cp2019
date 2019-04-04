@@ -1,0 +1,13 @@
+arr=[]
+def find_primes(n):
+	if n==1: 
+		return arr
+	i=2
+	while n%i!=0:
+		i+=1
+	
+	arr.append(i)
+	n/=i
+	return find_primes(n)
+
+print(find_primes(600851475143))
