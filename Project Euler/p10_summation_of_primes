@@ -1,0 +1,67 @@
+'''def first_n_primes(n):
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==1:
+        return 2
+    arr=[2]
+    counter=2
+    check=3
+    arr.append(check)
+    while counter<n:
+        check+=2
+        if is_prime(check):
+            counter+=1
+            arr.append(check)
+    return arr
+    
+def all primes_below_n(n):
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==0 or n==1 or n==2:
+        return 0
+    if n==3:
+        return 2
+    arr=[2, 3]
+    check=3
+    while check<n-2:
+        check+=2
+        if is_prime(check):
+            arr.append(check)
+
+    return arr'''
+    
+
+def sum_primes(n):
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==0 or n==1 or n==2:
+        return 0
+    if n==3:
+        return 2
+    arr=[2, 3]
+    check=3
+    while check<n-2:
+        check+=2
+        if is_prime(check):
+            arr.append(check)
+    sum=0
+    for i in arr:
+        sum+=i
+    return sum
+print(sum_primes(2000000))
+    
