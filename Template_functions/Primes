@@ -1,0 +1,97 @@
+#returns the prime factors of n
+def find_primes(n):
+	if n==1: 
+		return arr
+	i=2
+	while n%i!=0:
+		i+=1
+	
+	arr.append(i)
+	n/=i
+	return find_primes(n)
+  
+#returns true if n is prime
+def find_primes(n):
+    arr=[]
+    if n==1:
+        return arr
+    while n%2==0:
+        arr.append(2)
+        n/=2
+    while n!=1:
+        i=3
+        while n%i!=0:
+            i+=2
+        arr.append(i)
+        n/=i
+    
+    return arr
+    
+#returns the nth prime, with the 1st prime being 2
+def get_prime(n):
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==1:
+        return 2
+    counter=2
+    check=3
+    while counter<n:
+        check+=2
+        if is_prime(check):
+            counter+=1
+
+    return check
+
+#returns array of first n primes
+def first_n_primes(n):
+    n=int(n)
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==1:
+        return 2
+    arr=[2]
+    counter=2
+    check=3
+    arr.append(check)
+    while counter<n:
+        check+=2
+        if is_prime(check):
+            counter+=1
+            arr.append(check)
+    return arr
+    
+#returns array of all primes below n
+def all_primes_below_n(n):
+    n=int(n)
+    import math
+    def is_prime(n):
+        for i in range(2, math.ceil(math.sqrt(n))+1):
+            if n%i==0:
+        	    return False
+        else:
+            return True
+    if n==0 or n==1 or n==2:
+        return 0
+    if n==3:
+        return 2
+    arr=[2, 3]
+    check=3
+    while check<n-2:
+        check+=2
+        if is_prime(check):
+            arr.append(check)
+
+    return arr
+
+
+    
