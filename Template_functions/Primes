@@ -17,48 +17,41 @@ def find_primes(n):
     return arr
     
 #returns the nth prime, with the 1st prime being 2
-def get_prime(n):
-    def isPrime(n):
-        if n==2:
-            return True
-        if n%2==0 or n==1 or n==0:
-            return False
-        for i in range(3,int(n**0.5)+1, 2):
-            if n%i==0:
-                return False
-        return True
+def get_nth_prime(n):
+    n=int(n)
+    arr=[2]
     if n==1:
         return 2
-    counter=2
     check=3
+    counter=1
     while counter<n:
-        check+=2
-        if is_prime(check):
-            counter+=1
-
-    return check
+        for i in arr:
+            if i>int(check**0.5):
+                arr.append(check)
+                counter+=1
+                break
+            if check%i==0:
+                break
+        check+=2        
+    return arr[-1]
 
 #returns array of first n primes
 def first_n_primes(n):
     n=int(n)
-    import math
-    def is_prime(n):
-        for i in range(2, math.ceil(math.sqrt(n))+1):
-            if n%i==0:
-        	    return False
-        else:
-            return True
-    if n==1:
-        return 2
     arr=[2]
-    counter=2
+    if n==1:
+        return arr
     check=3
-    arr.append(check)
+    counter=1
     while counter<n:
+        for i in arr:
+            if i>int(check**0.5):
+                arr.append(check)
+                counter+=1
+                break
+            if check%i==0:
+                break
         check+=2
-        if is_prime(check):
-            counter+=1
-            arr.append(check)
     return arr
     
 #returns array of all primes below n
