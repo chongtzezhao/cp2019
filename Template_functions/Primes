@@ -1,14 +1,21 @@
 #returns the prime factors of n
+
 def find_primes(n):
-	if n==1: 
-		return arr
-	i=2
-	while n%i!=0:
-		i+=1
-	
-	arr.append(i)
-	n/=i
-	return find_primes(n)
+    n = int(n)
+    if n==1:
+        return False
+    arr=[]
+    while n!=1:
+        if n%2==0:
+            arr.append(2)
+            n/=2
+        else:
+            for i in range(3, int(n+1), 2):
+                if n%i==0:
+                    arr.append(i)
+                    n/=i
+
+    return arr
   
 #returns true if n is prime
 def find_primes(n):
