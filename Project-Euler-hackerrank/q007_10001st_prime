@@ -1,0 +1,23 @@
+def first_n_primes(n):
+    n=int(n)
+    arr=[2]
+    if n==1:
+        return arr
+    check=3
+    counter=1
+    while counter<n:
+        for i in arr:
+            if i>int(check**0.5):
+                arr.append(check)
+                counter+=1
+                break
+            if check%i==0:
+                break
+        check+=2
+    return arr
+
+arr = first_n_primes(10001)
+t = int(input())
+for i in range(t):
+    n = int(input())
+    print(arr[n-1])
