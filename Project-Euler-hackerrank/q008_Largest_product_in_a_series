@@ -1,0 +1,13 @@
+t = int(input())
+for test in range(t):
+    n, k = input().split()
+    n, k = [int(n), int(k)]
+    num=str(input())
+    ans=0
+    for i in range(n-k):
+        product=1
+        for j in range(k):
+            product*=int(num[i+j])
+        ans=max(ans, product)
+
+    print(ans)
