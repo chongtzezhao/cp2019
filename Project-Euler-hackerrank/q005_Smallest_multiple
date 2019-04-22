@@ -1,0 +1,31 @@
+def all_primes_below_n(n):
+    n=int(n)
+    arr=[2]
+    if n==1:
+        return arr
+    check=3
+    while check<n:
+        for i in arr:
+            if i>int(check**0.5):
+                arr.append(check)
+                break
+            if check%i==0:
+                break
+        check+=2
+    return arr
+
+primes=all_primes_below_n(100)
+t = int(input())
+for i in range(t):
+    n=int(input())
+    ans=1
+    for prime in primes:
+        if prime>n:
+            break
+        i=1
+        while prime**i<=n:
+            i+=1
+        i-=1
+        ans*=prime**i
+
+    print(ans)
