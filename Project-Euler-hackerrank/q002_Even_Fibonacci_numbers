@@ -1,0 +1,18 @@
+t = int(input())
+
+for i in range(t):
+    n=int(input())
+    a=1
+    b=0
+    temp=0
+    total = 0
+
+    while a<=n:
+        if a+b>n:
+            break
+        else:
+            a+=b
+            b=a-b
+        if a%2==0:
+            total+=a
+    print(total)
