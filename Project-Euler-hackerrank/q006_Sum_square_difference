@@ -1,0 +1,7 @@
+t = int(input())
+
+for test in range(t):
+    n = int(input())
+    sum_of_squares = (n**3)/3 + (n**2)/2 + n/6
+    square_of_sum = ((n*(n+1))/2)**2
+    print(int(abs(sum_of_squares - square_of_sum)))
