@@ -1,0 +1,17 @@
+t = int(input())
+
+for i in range(t):
+    k=int(input())
+    
+    ans=0
+    i=2
+    while i**2 <= k:
+        if k%i==0:
+            ans=i
+            k//=i
+        else:
+            i+=1
+    if ans<k:
+        ans=k
+    
+    print(ans)
