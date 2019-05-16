@@ -1,0 +1,24 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    ans=-1
+    for i in range(1,n):
+        b=(n**2-2*i*n)/(2*n-2*i)
+        if b%2==0 or b%2==1:
+            c = n-i-b
+            ans = max(ans, i*b*c)
+            '''if i*b*c>ans:
+                ans=i*b*c
+                x=i
+                y=b
+                z=c'''
+    if ans==0:
+        print(-1)
+        #sys.exit()
+    else:
+        print(int(ans))
