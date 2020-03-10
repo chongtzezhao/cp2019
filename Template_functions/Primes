@@ -54,6 +54,16 @@ def first_n_primes(n):
         check+=2
     return arr
     
+def biggest_prime_below(n):
+    n=int(n)
+    if n<=3:
+        return 2
+    found = False
+    while not found:
+        n-=1
+        found = is_prime(n)
+    return n
+
 #returns array of all primes below n
 def all_primes_below_n(n):
     n=int(n)
@@ -80,3 +90,6 @@ def is_prime(n):
         if n%i==0:
             return False
     return True
+
+
+print(biggest_prime_below(10**10))
